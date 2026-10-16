@@ -1,16 +1,22 @@
 # vstupenka do divadla
 
-vek = int(input("Zadejte svůj věk: "))
-student = str(input("Jste student? (ano/ne): "))
 pocet_osob = int(input("Zadejte počet osob: "))
 cenaz = 500
 
-if pocet_osob > 3:
+if pocet_osob >= 4:
     cena = cenaz * 0.75
-elif vek < 26 and student == "ano":
-    cena = cenaz * 0.7
-elif vek > 65:
-    cena = cenaz * 0.8
+elif pocet_osob <= 3:
+    vek = int(input("Zadejte svůj věk: "))
+    if vek > 65:
+        cena = cenaz * 0.8
+    elif vek < 26:
+        student = str(input("Jste student? (ano/ne): "))
+        if student == "ano":
+          cena = cenaz * 0.7
+        else:
+            cena = cenaz
+    else:
+        cena = cenaz
 else:
     cena = cenaz
 
