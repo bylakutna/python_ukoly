@@ -14,8 +14,8 @@ elif b > a and b > c:
 else:
     max = c
 if (a == min or a == max) and (b == min or b == max):
-    print(min, c, max)
+    print(f"{min}<{c}<{max}")
 elif (b == min or b == max) and (c == min or c == max):
-     print(min, a, max)
+     print(f"{min}<{a}<{max}")
 else:
-    print(min, b, max)
+    print(f"{min}<{b}<{max}")
