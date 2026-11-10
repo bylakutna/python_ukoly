@@ -12,10 +12,13 @@ while uhodni != "s":
         break
     tip = int((dolni + horni) // 2)
     print(f"pokus: {pokus} Můj tip je: {tip}")
-    uhodni = input("Zadej jestli je můj tip v větší, menší nebo s správně: ")
-    elif uhodni == "v":
+    uhodni = input("Zadej jestli je tvoje číslo v větší,m menší nebo s správně: ")
+    if uhodni == "v":
         dolni = (tip + 1)
     elif uhodni == "m":
         horni = (tip - 1)
     elif uhodni == "s":
         print(f"Gratulujeme! Uhodl jsem číslo {tip} na {pokus}. pokus.")
+    else:
+        print("Zadal jsi špatnou odpověď, zkus to znovu.")
+        pokus -= 1
