@@ -15,4 +15,9 @@ while True:
         vymera = delka * sirka
         celkova_vymera += vymera
     print(f"Celkova vymera bytu je: {celkova_vymera} m2")
-    input
+    odpoved = input("Chceš udelat další byt? pokud ano zadej ano: ")
+    if odpoved == "ano":
+        print("Vypocet celkove vymery bytu v m2")
+    else:
+        break
+    
