@@ -3,7 +3,6 @@ pokracovat = "ano"
 vyska = 0
 syrka = 0
 obrazec = ""
-
 while pokracovat == "ano":
     obrazec = input("Zadej tvar, který chceš nakreslit: ")
     if obrazec == "c":
@@ -18,6 +17,25 @@ while pokracovat == "ano":
         pocitadlo = 0
         while pocitadlo < vyska:
             print("*" * syrka)
+            pocitadlo += 1
+    elif obrazec == "cn":
+        vyska = int(input("Zadej délku strany čtverce: "))
+        pocitadlo = 0
+        while pocitadlo < vyska:
+            if pocitadlo == 0 or pocitadlo == vyska - 1:
+                print("*" * vyska)
+            else:
+                print("*" + " " * (vyska - 2) + "*")
+            pocitadlo += 1
+    elif obrazec == "on":
+        syrka = int(input("Zadej šířku obdélníku: "))
+        vyska = int(input("Zadej výšku obdélníku: "))
+        pocitadlo = 0
+        while pocitadlo < vyska:
+            if pocitadlo == 0 or pocitadlo == vyska - 1:
+                print("*" * syrka)
+            else:
+                print("*" + " " * (syrka - 2) + "*")
             pocitadlo += 1
     elif obrazec == "tpl":
         vyska = int(input("Zadej základnu trojúhelníku: "))
@@ -52,7 +70,6 @@ while pokracovat == "ano":
             pocitadlo += 2
     else:
         print("Neplatný tvar. Zkus to znovu.")
-
     pokracovat = input("Chceš nakreslit další tvar? ")
     while pokracovat != "ano" and pokracovat != "ne":
         pokracovat = input("Neplatná volba. Zadej 'ano' nebo 'ne': ")
