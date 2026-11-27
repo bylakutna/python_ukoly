@@ -19,6 +19,8 @@ def cifra_na_znak(hodnota):
         print ("neco se pokazilo. Hodnota je mimo rozsah 0-15")
         return None
 def preved_soustavu(cislo, zaklad):
+    if cislo == 0:
+        return "0"
     prevedene_cislo = ""
     while cislo > 0:
         zbytek = cislo % zaklad
@@ -26,7 +28,7 @@ def preved_soustavu(cislo, zaklad):
         prevedene_cislo = cifra_na_znak(zbytek) + prevedene_cislo
     return prevedene_cislo
 
-print(preved_soustavu(10, 2))
+print(preved_soustavu(-1, 2))
 print(preved_soustavu(25, 8))
 print(preved_soustavu(255, 16))
 
